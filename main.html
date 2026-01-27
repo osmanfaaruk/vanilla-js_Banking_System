@@ -16,7 +16,7 @@
             <nav class="flex justify-around items-center">
                 <img class="w-16" src="./assets/Group.png" alt="">
                 <div>
-                    <h1 class="text-3xl font-bold">$4500</h1>
+                    <h1 class="text-3xl font-bold">$ <span id="display-amount">4500</span></h1>
                     <p class="border rounded p-1">Available Balance</p>
                 </div>
                 <button class="btn">Logout</button>
@@ -25,11 +25,11 @@
                 <h1 class="text-2xl font-bold mb-2">🔥 Welcome to Payooo!</h1>
                 <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
                 <div class="cards grid grid-cols-3 mt-14 rounded gap-2 p-2">
-                    <div class="cursor-pointer box border p-4 text-center rounded-sm">
+                    <div id="add-money-box" class="cursor-pointer box border p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/wallet 1.png" alt="">
                         <h3>Add Money</h3>
                     </div>
-                    <div class="cursor-pointer box border p-4 text-center rounded-sm">
+                    <div id="cashOut-box" class="cursor-pointer box border p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/send 1.png" alt="">
                         <h3>Cashout</h3>
                     </div>
@@ -50,8 +50,8 @@
                         <h3>Transaction History</h3>
                     </div>
                 </div>
-
-                <section>
+<!--   add money card -->
+                <section id="addMoneyCard">
                     <h2>Add money</h2>
                     <div class="">
                         <div class="hero-content flex-col lg:flex-row-reverse">
@@ -68,21 +68,40 @@
                                         <label class="label">Number</label>
                                         <input value="241001012" id="Account-number" type="number" class="input"
                                             placeholder="Number" required />
+                                        <label class="label">Amount Number</label>
+                                        <input id="Amount-number" type="number" class="input" placeholder="Amount"
+                                            required />
                                         <label class="label">Pin</label>
                                         <input value="5555" id="pin-number" type="text" class="input" placeholder="Pin"
                                             required />
                                         <div><a class="link link-hover">Forgot password?</a></div>
-                                        <button id="login-btn" class="btn btn-neutral bg-blue-700 border-none mt-4">Add Money</button>
+                                        <button id="add-money" class="btn btn-neutral bg-blue-700 border-none mt-4">Add
+                                            Money</button>
                                     </fieldset>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+                <!-- cashout card -->
+                <section id="cashOutCard">
+                    <fieldset class="fieldset">
+                        <label class="label">Number</label>
+                        <input value="241001012" id="Account-number" type="number" class="input" placeholder="Number"
+                            required />
+                        <label class="label">Amount Number</label>
+                        <input id="Amount-number" type="number" class="input" placeholder="Amount" required />
+                        <label class="label">Pin</label>
+                        <input value="5555" id="pin-number" type="text" class="input" placeholder="Pin" required />
+                        <div><a class="link link-hover">Forgot password?</a></div>
+                        <button id="add-money" class="btn btn-neutral bg-blue-700 border-none mt-4">Cash Out</button>
+                    </fieldset>
+                </section>
             </section>
         </header>
     </section>
-
+    <script src="./script/addMoney.js"></script>
+    <script src="./script/toggle.js"></script>
 </body>
 
 </html>
