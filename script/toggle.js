@@ -11,3 +11,5 @@ document.getElementById("cashOut-box").addEventListener("click", function(){
     document.getElementById("addMoneyCard").style.display = "none";
     document.getElementById("cashOutCard").style.display = "block";
 })
+
+
